@@ -1,0 +1,151 @@
+# =============================================================================
+# SOVEREIGN AI STARTER PACK — OLLAMA EDITION — .gitignore
+# MATTEBLACK STUDIOS
+# =============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# VS Code / Cursor / JetBrains
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json.example
+.cursor/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.venv/
+venv/
+ENV/
+env/
+.env
+.env.*
+!.env.example
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+.npm/
+.yarn/
+.parcel-cache/
+.next/
+.nuxt/
+out/
+.cache/
+
+# Local AI / user working artifacts (never commit)
+*.chat
+*.conversation
+chat_exports/
+ai_outputs/
+working_files/
+scratch/
+Modelfile.local
+ollama_logs/
+
+# Logs, temp, cache
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.orig
+.cache/
+cache/
+
+# Secrets and credentials
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+credentials/
+credentials.json
+*.credentials
+api_keys/
+.secrets
+
+# Obsidian / vault / personal knowledge bases
+.obsidian/
+.obsidian-*/
+**/vault/
+**/*[Vv]ault*/
+**/.trash/
+**/.stversions/
+
+# System-specific local paths
+/Volumes/
+/Users/*/
+/private/
+
+# Archives (Gumroad bundles — build locally, do not commit)
+*.zip
+*.tar.gz
+*.7z

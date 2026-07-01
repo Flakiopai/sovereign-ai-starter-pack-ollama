@@ -1,0 +1,34 @@
+# =============================================================================
+# SOVEREIGN AI STARTER PACK — OLLAMA EDITION — .gitattributes
+# MATTEBLACK STUDIOS — Clean diffs and text normalization
+# =============================================================================
+
+* text=auto eol=lf
+
+*.md            text diff=markdown
+*.txt           text
+*.mdx           text
+LICENSE         text
+SECURITY.md     text
+CONTRIBUTING.md text
+CODE_OF_CONDUCT.md text
+
+*.sh            text eol=lf
+*.bash          text eol=lf
+
+.gitignore      text
+.gitattributes  text
+.editorconfig   text
+
+.github/**      text
+
+*.png           binary
+*.jpg           binary
+*.jpeg          binary
+*.gif           binary
+*.webp          binary
+*.ico           binary
+*.pdf           binary
+*.zip           binary
+
+*.txt           linguist-documentation

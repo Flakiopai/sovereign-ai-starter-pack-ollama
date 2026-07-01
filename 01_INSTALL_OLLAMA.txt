@@ -1,0 +1,162 @@
+SOVEREIGN AI STARTER PACK — OLLAMA EDITION
+01 — Install Ollama
+
+------------------------------------------------------------
+WHAT YOU ARE INSTALLING
+------------------------------------------------------------
+
+Ollama is a free app that downloads and runs AI language models on your
+computer. After install, you control everything from a simple terminal
+command or a companion app.
+
+Official site: https://ollama.com
+Official download: https://ollama.com/download
+
+
+------------------------------------------------------------
+BEFORE YOU START
+------------------------------------------------------------
+
+  • Close other heavy apps if your machine has 8 GB RAM or less
+  • Make sure you have at least 10 GB free disk space
+  • You need internet for the install and first model download only
+  • macOS 12+, Windows 10/11 (64-bit), or a modern Linux distro
+
+
+------------------------------------------------------------
+macOS INSTALL
+------------------------------------------------------------
+
+  1. Go to https://ollama.com/download
+  2. Download the macOS installer (.dmg)
+  3. Open the downloaded file
+  4. Drag Ollama into your Applications folder
+  5. Open Ollama from Applications (you may see a menu bar icon)
+  6. Open Terminal (Applications → Utilities → Terminal)
+  7. Type:  ollama --version
+  8. If you see a version number, install succeeded
+
+Apple Silicon Macs (M1/M2/M3/M4) run models much faster than Intel Macs.
+Both work.
+
+
+------------------------------------------------------------
+WINDOWS INSTALL
+------------------------------------------------------------
+
+  1. Go to https://ollama.com/download
+  2. Download the Windows installer (.exe)
+  3. Run the installer
+  4. Approve the security prompt if Windows asks
+  5. Follow the on-screen steps
+  6. Open PowerShell or Command Prompt
+  7. Type:  ollama --version
+  8. If you see a version number, install succeeded
+
+Optional: an NVIDIA GPU speeds up larger models. Not required to start.
+
+
+------------------------------------------------------------
+LINUX INSTALL
+------------------------------------------------------------
+
+  1. Open your terminal
+  2. Run the official install script:
+
+       curl -fsSL https://ollama.com/install.sh | sh
+
+  3. Wait for it to finish
+  4. Type:  ollama --version
+  5. If you see a version number, install succeeded
+
+Works on Ubuntu, Debian, Fedora, Arch, and most common distros.
+
+
+------------------------------------------------------------
+VERIFY THE INSTALL
+------------------------------------------------------------
+
+Run this in Terminal or PowerShell:
+
+  ollama --version
+
+Expected result: a version string (example: ollama version 0.x.x)
+
+If you get "command not found":
+  • Close the terminal completely and open a new one
+  • On Windows, restart the Ollama service (see 07_TROUBLESHOOTING.txt)
+  • Restart your computer if it still fails
+
+
+------------------------------------------------------------
+RUN YOUR FIRST MODEL
+------------------------------------------------------------
+
+This is the moment everything clicks. In Terminal or PowerShell:
+
+  ollama run llama3.2
+
+What happens:
+  1. Ollama downloads the model (first time only — be patient)
+  2. The model loads into memory
+  3. You see a prompt where you can type messages
+  4. The AI responds — entirely on your machine
+
+Try typing:  Explain local AI in one paragraph.
+
+To exit: press Ctrl + C
+
+To run again later (no re-download):
+
+  ollama run llama3.2
+
+
+------------------------------------------------------------
+USEFUL OLLAMA COMMANDS (BEGINNER)
+------------------------------------------------------------
+
+  ollama list              Show models you have downloaded
+  ollama pull <name>       Download a model without chatting
+  ollama run <name>        Download (if needed) and start chatting
+  ollama rm <name>         Delete a model to free disk space
+  ollama ps                Show what is running right now
+
+Example — download without opening chat:
+
+  ollama pull mistral
+
+
+------------------------------------------------------------
+WHERE MODELS ARE STORED
+------------------------------------------------------------
+
+Ollama saves models on your local disk. Typical locations:
+
+  macOS:   ~/.ollama/models/
+  Linux:   ~/.ollama/models/
+  Windows: C:\Users\<YourName>\.ollama\models\
+
+You can delete any model with  ollama rm <name>  to reclaim space.
+
+
+------------------------------------------------------------
+OLLAMA APP VS TERMINAL
+------------------------------------------------------------
+
+On Mac and Windows, Ollama also runs as a background app (menu bar or
+system tray). The terminal commands talk to that app.
+
+If commands fail, make sure the Ollama app is running:
+  • Mac: check the menu bar for the Ollama icon
+  • Windows: check system tray or Services for "Ollama"
+
+
+------------------------------------------------------------
+NEXT STEPS
+------------------------------------------------------------
+
+  • Product overview → README.md
+  • Pick a model for your hardware → 04_MODEL_RECOMMENDATIONS.txt
+  • Understand RAM and speed → 03_MODEL_HORSEPOWER_GUIDE.txt
+  • Add a browser chat UI → 02_INSTALL_OPENWEBUI.txt
+  • Something broke? → 07_TROUBLESHOOTING.txt

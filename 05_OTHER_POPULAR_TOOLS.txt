@@ -1,0 +1,200 @@
+SOVEREIGN AI STARTER PACK — OLLAMA EDITION
+05 — Other Popular Tools
+
+------------------------------------------------------------
+PHILOSOPHY
+------------------------------------------------------------
+
+This pack is Ollama-first, but local AI is not locked to one app. The
+tools below all support the same sovereign idea: run models on your
+hardware, stay offline, keep control.
+
+You can use Ollama alone forever, or try these when you want a different
+interface or feature set. The privacy rules in 09_SAFETY_AND_PRIVACY.txt
+apply to every tool listed here.
+
+
+------------------------------------------------------------
+OLLAMA (PRIMARY — WHAT THIS PACK USES)
+------------------------------------------------------------
+
+  Type:     Command-line + background service
+  Cost:     Free, open-source
+  Privacy:  Local by default
+  Best for: Simplest install, huge model library, scripting, servers
+  Site:     https://ollama.com
+
+  Why this pack starts here:
+    One command to run a model. Works everywhere. Other tools often
+    connect to Ollama instead of replacing it.
+
+
+------------------------------------------------------------
+OPEN WEBUI
+------------------------------------------------------------
+
+  Type:     Browser-based chat interface
+  Cost:     Free, open-source
+  Privacy:  Self-hosted on your machine
+  Best for: ChatGPT-like experience with Ollama models
+  Site:     https://github.com/open-webui/open-webui
+
+  Setup:    02_INSTALL_OPENWEBUI.txt
+
+
+------------------------------------------------------------
+GPT4ALL
+------------------------------------------------------------
+
+  Type:     Desktop app with built-in model browser
+  Cost:     Free
+  Privacy:  Local inference; optional online features (can be disabled)
+  Best for: Beginners who want a single app with no terminal
+  Site:     https://gpt4all.io
+
+  Notes:
+    • Download models from inside the app
+    • Simple chat UI out of the box
+    • Good alternative if terminal feels intimidating
+    • Read settings carefully — turn off anything that mentions "cloud"
+      or "telemetry" if you want full sovereignty
+
+
+------------------------------------------------------------
+LM STUDIO
+------------------------------------------------------------
+
+  Type:     Desktop app for discovering and running local models
+  Cost:     Free for local use
+  Privacy:  Local inference on your machine
+  Best for: Browsing Hugging Face models with a polished UI
+  Site:     https://lmstudio.ai
+
+  Notes:
+    • Strong model discovery and comparison tools
+    • Built-in chat and local server mode
+    • Popular with people who want to experiment with many models
+    • Heavier app than Ollama alone — check RAM usage
+
+
+------------------------------------------------------------
+JAN
+------------------------------------------------------------
+
+  Type:     Open-source ChatGPT-style desktop client
+  Cost:     Free, open-source
+  Privacy:  Local-first design
+  Best for: Clean offline chat with downloadable models
+  Site:     https://jan.ai
+
+  Notes:
+    • Works on Mac, Windows, and Linux
+    • Manages its own models (separate from Ollama unless configured)
+    • Good UI for non-technical users
+    • Can connect to local inference servers in advanced setups
+
+
+------------------------------------------------------------
+KOBOLDCPP
+------------------------------------------------------------
+
+  Type:     Single-file local inference engine (often used for storytelling)
+  Cost:     Free, open-source
+  Privacy:  Fully offline
+  Best for: Creative writing, roleplay, custom sampling controls
+  Site:     https://github.com/LostRuins/koboldcpp
+
+  Notes:
+    • More technical than Ollama
+    • Popular in writing and interactive fiction communities
+    • Runs GGUF model files directly
+    • Steeper learning curve — not ideal as a first tool
+
+
+------------------------------------------------------------
+TEXT GENERATION WEBUI (OOBABOOGA)
+------------------------------------------------------------
+
+  Type:     Advanced web UI for local models
+  Cost:     Free, open-source
+  Privacy:  Self-hosted locally
+  Best for: Power users who want deep control over sampling and extensions
+  Site:     https://github.com/oobabooga/text-generation-webui
+
+  Notes:
+    • Very flexible, many extensions
+    • More complex setup than Ollama or GPT4All
+    • Best after you understand basics from this pack
+
+
+------------------------------------------------------------
+LOCALAI
+------------------------------------------------------------
+
+  Type:     API-compatible local inference server
+  Cost:     Free, open-source
+  Privacy:  Self-hosted
+  Best for: Developers who want OpenAI-style API endpoints locally
+  Site:     https://localai.io
+
+  Notes:
+    • Not beginner-first — listed for completeness
+    • Useful when wiring local AI into other apps or scripts
+
+
+------------------------------------------------------------
+TOOL COMPARISON (QUICK REFERENCE)
+------------------------------------------------------------
+
+  Tool              Beginner ease   Terminal?   Model library
+  ----              -------------   ---------   -------------
+  Ollama            Excellent       Optional    Huge (ollama.com/library)
+  Open WebUI        Very good       Setup once  Uses Ollama models
+  GPT4All           Excellent       No          Built-in browser
+  LM Studio         Very good       No          Hugging Face + local
+  Jan               Very good       No          Built-in + hubs
+  KoboldCPP         Advanced        Some        Manual GGUF files
+  Oobabooga         Advanced        Some        Manual + extensions
+
+
+------------------------------------------------------------
+CAN YOU USE MULTIPLE TOOLS AT ONCE?
+------------------------------------------------------------
+
+Yes, but they compete for the same RAM and GPU.
+
+  • Do not run a large model in Ollama AND LM Studio simultaneously
+  • Pick one active inference tool per session
+  • You can install many tools — just use one at a time on weak hardware
+
+
+------------------------------------------------------------
+SWITCHING FROM OLLAMA TO ANOTHER TOOL
+------------------------------------------------------------
+
+  1. Your sovereign rules stay the same (local, private, your disk)
+  2. Models may need re-downloading in the new app's format
+  3. Ollama models (in ~/.ollama) are not automatically shared with
+     GPT4All or Jan — each app manages its own storage
+  4. Open WebUI is the exception — it uses Ollama directly
+
+
+------------------------------------------------------------
+OPTIONAL SUPPORT TOOLS
+------------------------------------------------------------
+
+These do not run AI models but help a local setup:
+
+  Docker Desktop     — runs Open WebUI in a container
+  Hugging Face       — model hub (download only; use offline after)
+  ngrok / Tailscale  — advanced remote access (not needed for beginners)
+
+
+------------------------------------------------------------
+NEXT STEPS
+------------------------------------------------------------
+
+  • Product overview → README.md
+  • Stay with Ollama → 01_INSTALL_OLLAMA.txt
+  • Hardware limits → 06_HARDWARE_GUIDE.txt
+  • Privacy rules for any tool → 09_SAFETY_AND_PRIVACY.txt

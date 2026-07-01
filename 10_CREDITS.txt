@@ -1,0 +1,138 @@
+SOVEREIGN AI STARTER PACK — OLLAMA EDITION
+10 — Credits and Attribution
+
+------------------------------------------------------------
+ABOUT THIS PACK
+------------------------------------------------------------
+
+Created by MATTEBLACK STUDIOS as a sovereign, local-first starter guide
+for running open-source language models on your own hardware.
+
+This pack documents tools and practices. The software below is third-party,
+free or open-source, and must be downloaded separately by the user. Nothing
+in this pack implies endorsement, affiliation, or partnership with any
+listed project unless explicitly stated.
+
+
+------------------------------------------------------------
+PRIMARY TOOLS (DOCUMENTED IN THIS PACK)
+------------------------------------------------------------
+
+OLLAMA
+  Role:    Local AI engine — downloads and runs language models
+  Site:    https://ollama.com
+  License: MIT (verify on official repository)
+  Note:    Primary tool for this starter pack
+
+OPEN WEBUI
+  Role:    Optional browser chat interface for Ollama
+  Site:    https://github.com/open-webui/open-webui
+  License: Open-source (see repository for current license)
+  Note:    Self-hosted; runs on user's machine
+
+DOCKER DESKTOP
+  Role:    Container platform (optional, for Open WebUI install)
+  Site:    https://www.docker.com
+  Note:    Free tier available; not required for Ollama alone
+
+
+------------------------------------------------------------
+ALTERNATIVE TOOLS (REFERENCED, NOT INCLUDED)
+------------------------------------------------------------
+
+GPT4ALL
+  Site: https://gpt4all.io
+  Role: Desktop local AI app with built-in model browser
+
+LM STUDIO
+  Site: https://lmstudio.ai
+  Role: Desktop app for running and discovering local models
+
+JAN
+  Site: https://jan.ai
+  Role: Open-source offline ChatGPT-style client
+
+KOBOLDCPP
+  Site: https://github.com/LostRuins/koboldcpp
+  Role: Local inference for creative writing and GGUF models
+
+TEXT GENERATION WEBUI (OOBABOOGA)
+  Site: https://github.com/oobabooga/text-generation-webui
+  Role: Advanced local inference web UI
+
+LOCALAI
+  Site: https://localai.io
+  Role: Self-hosted API-compatible inference server
+
+
+------------------------------------------------------------
+MODEL DEVELOPERS (EXAMPLES CITED IN THIS PACK)
+------------------------------------------------------------
+
+Models are open weights released by their respective organizations.
+Verify license terms on each model's official page before commercial use.
+
+  Meta — Llama family (https://ai.meta.com)
+  Alibaba — Qwen family (https://qwenlm.ai)
+  Mistral AI — Mistral / Mixtral (https://mistral.ai)
+  Google — Gemma (https://deepmind.google)
+  Microsoft — Phi (https://www.microsoft.com/en-us/research)
+  Code Llama — Meta code-focused models
+
+Browse current models: https://ollama.com/library
+
+
+------------------------------------------------------------
+OPTIONAL SUPPORT SOFTWARE (REFERENCED)
+------------------------------------------------------------
+
+  Python — https://python.org (optional Open WebUI pip install)
+  Hugging Face — https://huggingface.co (model hub; offline use after download)
+
+
+------------------------------------------------------------
+ATTRIBUTION STATEMENT
+------------------------------------------------------------
+
+All trademarks, service marks, and trade names belong to their respective
+owners.
+
+MATTEBLACK STUDIOS is not affiliated with or endorsed by Ollama, Open WebUI,
+Meta, Mistral AI, Google, Microsoft, Alibaba, or any other third-party
+project mentioned in this pack.
+
+Tools are listed for transparency and education. Users may choose any
+preferred local software that supports sovereign, offline-first principles.
+
+
+------------------------------------------------------------
+PACK AUTHORSHIP
+------------------------------------------------------------
+
+  Product:  Sovereign AI Starter Pack — Ollama Edition
+  Publisher: MATTEBLACK STUDIOS
+  License:   MIT (see LICENSE in this folder)
+
+For questions about third-party licenses, refer to each project's official
+documentation and license files.
+
+
+------------------------------------------------------------
+USER RESPONSIBILITY
+------------------------------------------------------------
+
+You are responsible for:
+  • Complying with each model's license terms
+  • Following local laws and workplace policies
+  • Keeping your system secure and your data private
+  • Verifying AI outputs before acting on them
+
+This pack teaches setup and principles — not legal advice.
+
+
+------------------------------------------------------------
+NEXT STEPS
+------------------------------------------------------------
+
+  • Product overview → README.md
+  • Install guide → 01_INSTALL_OLLAMA.txt

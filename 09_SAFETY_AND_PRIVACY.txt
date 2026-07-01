@@ -1,0 +1,165 @@
+SOVEREIGN AI STARTER PACK — OLLAMA EDITION
+09 — Safety and Privacy
+
+------------------------------------------------------------
+CORE PRINCIPLE
+------------------------------------------------------------
+
+Sovereign compute means your AI runs on your hardware, under your
+control. No cloud by default. No third party reading your prompts.
+Your machine. Your data. Your rules.
+
+
+------------------------------------------------------------
+WHAT "LOCAL" ACTUALLY MEANS
+------------------------------------------------------------
+
+When you use Ollama correctly:
+  • Chat inference happens on your CPU/GPU
+  • Model files sit on your disk
+  • No account is required to run models
+  • You can delete models and history anytime
+
+"Caveats" beginners should know:
+  • Downloading a model uses the internet (one-time per model)
+  • Some companion apps offer optional cloud sync — turn it OFF if you
+    want strict local-only
+  • Physical access to your PC = access to your files (lock your screen)
+
+
+------------------------------------------------------------
+KEEPING YOUR SETUP SOVEREIGN
+------------------------------------------------------------
+
+  [ ] Ollama installed from official source (ollama.com)
+  [ ] Models pulled only when you choose
+  [ ] Open WebUI (if used) runs on localhost — not exposed to internet
+  [ ] Cloud / telemetry toggles OFF in any secondary app (GPT4All, etc.)
+  [ ] No personal secrets pasted into chat (passwords, SSN, bank data)
+  [ ] Shared PC: log out, delete sensitive chats, or use separate OS user
+  [ ] Models removed when no longer needed (ollama rm)
+
+
+------------------------------------------------------------
+DATA ON YOUR DISK
+------------------------------------------------------------
+
+Things stored locally:
+  • Downloaded models (~/.ollama/models/)
+  • Open WebUI chat history (Docker volume or app data folder)
+  • Logs from various apps (usually small)
+
+To wipe Ollama models:
+  ollama list
+  ollama rm <each-model-name>
+
+To remove everything Ollama-related, delete the .ollama folder in your
+user directory (only if you intend a full reset).
+
+
+------------------------------------------------------------
+NETWORK EXPOSURE — DO NOT SKIP THIS
+------------------------------------------------------------
+
+By default, Open WebUI on localhost:3000 is only reachable from YOUR
+computer. That is what you want.
+
+Do NOT:
+  • Port-forward Open WebUI to the public internet without hardening
+  • Share your local AI URL on social media
+  • Run unauthenticated Open WebUI on a network you do not trust
+
+Advanced users who need remote access should use VPN solutions (e.g.
+Tailscale) — outside beginner scope of this pack.
+
+
+------------------------------------------------------------
+RESPONSIBLE USE
+------------------------------------------------------------
+
+Local AI does not remove ethical responsibility.
+
+  • Do not use AI to generate harassment, threats, or illegal content
+  • Do not use AI to impersonate real people without consent
+  • Verify important facts — models can be wrong
+  • Do not rely on AI for medical, legal, or financial decisions
+  • Respect copyright and others' intellectual property
+  • Follow your local laws and workplace policies
+
+
+------------------------------------------------------------
+PRIVACY WITH SENSITIVE TOPICS
+------------------------------------------------------------
+
+Even on local AI:
+  • Treat chats like files on your desktop — recoverable until deleted
+  • Avoid pasting medical records, legal documents, or HR complaints
+    unless you accept the risk of local storage
+  • Encrypt your disk (FileVault on Mac, BitLocker on Windows) if the
+    machine could be lost or stolen
+
+
+------------------------------------------------------------
+KIDS AND FAMILY COMPUTERS
+------------------------------------------------------------
+
+  • Local AI has no built-in parental filter by default
+  • Model outputs can be inappropriate if prompted that way
+  • Supervise young users or restrict access at the OS level
+  • Consider a dedicated user account for AI experiments
+
+
+------------------------------------------------------------
+THIRD-PARTY TOOLS
+------------------------------------------------------------
+
+If you try GPT4All, LM Studio, Jan, or others (05_OTHER_POPULAR_TOOLS.txt):
+
+  • Read each app's privacy settings on first launch
+  • Disable analytics, cloud sync, and "improve our service" options
+     if you want sovereignty
+  • Assume defaults may change between versions — re-check after updates
+
+
+------------------------------------------------------------
+HARDWARE SAFETY
+------------------------------------------------------------
+
+  • AI workloads heat CPU/GPU — ensure vents are clear
+  • Laptops: use on hard surfaces during long sessions
+  • Stop if the machine is uncomfortably hot
+  • Unplug and cool down if thermal shutdown occurs
+
+
+------------------------------------------------------------
+WHAT THIS PACK WILL NEVER ASK YOU TO DO
+------------------------------------------------------------
+
+  • Upload your chats to a cloud service for "better answers"
+  • Create accounts with third-party AI providers to use Ollama
+  • Disable your firewall to install local AI
+  • Share personal data in prompts for "setup" or "activation"
+  • Pay a subscription to keep using what you already installed locally
+
+
+------------------------------------------------------------
+SOVEREIGN MINDSET
+------------------------------------------------------------
+
+The goal is independence:
+  • You can work offline after models are downloaded
+  • You choose what stays and what gets deleted
+  • You are not locked to one vendor's cloud
+  • You can switch tools without losing the underlying idea
+
+Local AI is a skill and a stance — not just an app install.
+
+
+------------------------------------------------------------
+NEXT STEPS
+------------------------------------------------------------
+
+  • Product overview → README.md
+  • Technical problems → 07_TROUBLESHOOTING.txt
+  • Quick answers → 08_FAQ.txt
+  • Tool licenses → 10_CREDITS.txt

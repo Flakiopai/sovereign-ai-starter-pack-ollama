@@ -1,0 +1,236 @@
+SOVEREIGN AI STARTER PACK — OLLAMA EDITION
+07 — Troubleshooting
+
+------------------------------------------------------------
+HOW TO USE THIS FILE
+------------------------------------------------------------
+
+Find the symptom that matches your problem. Try the fixes in order.
+Most beginner issues are install, RAM, or network related — not broken AI.
+
+
+------------------------------------------------------------
+"OLLAMA: COMMAND NOT FOUND"
+------------------------------------------------------------
+
+Your terminal cannot find Ollama.
+
+Fix:
+  • Close the terminal completely. Open a new one. Try: ollama --version
+  • Mac: open Ollama from Applications first (menu bar icon should appear)
+  • Windows: open Services → find Ollama → Restart
+  • Windows: reinstall from https://ollama.com/download
+  • Linux: re-run the install script
+  • Restart your computer as a last resort
+
+
+------------------------------------------------------------
+OLLAMA WON'T START (WINDOWS)
+------------------------------------------------------------
+
+Fix:
+  1. Press Start, type Services
+  2. Find Ollama in the list
+  3. Right-click → Restart
+  4. If disabled, set Startup type to Automatic
+  5. Reboot if the service keeps stopping
+
+
+------------------------------------------------------------
+MODEL WON'T DOWNLOAD / STUCK AT 0%
+------------------------------------------------------------
+
+You need internet for the first download only.
+
+Fix:
+  • Check your Wi-Fi or ethernet connection
+  • Try again: ollama pull llama3.2
+  • Disable VPN temporarily (some block large downloads)
+  • Corporate or school networks may block — try home network or hotspot
+  • Windows: run PowerShell as Administrator and retry
+  • Check free disk space (need several GB per model)
+
+
+------------------------------------------------------------
+MODEL FAILS TO LOAD / OUT OF MEMORY
+------------------------------------------------------------
+
+The model is too large for your RAM.
+
+Fix:
+  • Stop the model: Ctrl + C
+  • Switch to a smaller model: ollama run phi3  or  ollama run llama3.2:1b
+  • Close Chrome, Discord, games, and other RAM-heavy apps
+  • Check running models: ollama ps  — stop extras
+  • See 03_MODEL_HORSEPOWER_GUIDE.txt for size vs RAM table
+  • Delete unused large models: ollama rm <name>
+
+
+------------------------------------------------------------
+RESPONSES ARE VERY SLOW
+------------------------------------------------------------
+
+Normal on CPU-only machines with 8 GB RAM. Still fixable.
+
+Fix:
+  • Use a smaller model (phi3, mistral, llama3.2:1b)
+  • Close background apps
+  • Plug in laptop power (battery mode throttles)
+  • Check Activity Monitor / Task Manager for memory pressure
+  • Apple Silicon: first reply after load is slowest — wait 30–60 seconds
+  • Do not run Open WebUI + huge model + browser with 50 tabs
+
+
+------------------------------------------------------------
+MODEL GIVES WRONG OR MADE-UP ANSWERS
+------------------------------------------------------------
+
+All language models hallucinate sometimes. This is not an install bug.
+
+Fix:
+  • Ask it to cite uncertainty: "If you are not sure, say so"
+  • Break complex questions into smaller parts
+  • Verify facts for anything important (health, legal, money)
+  • Try a different model (qwen2.5 for logic, llama3.2 for general)
+  • Upgrade model size only if hardware allows
+
+
+------------------------------------------------------------
+OPEN WEBUI PAGE WON'T LOAD
+------------------------------------------------------------
+
+Fix:
+  • Confirm URL: http://localhost:3000 (Docker) or :8080 (pip)
+  • Is Docker Desktop running? (docker method)
+  • Check container: docker ps  — look for open-webui
+  • Start container: docker start open-webui
+  • Wait 30 seconds after start, refresh browser
+  • Try a different browser (Chrome, Firefox, Safari)
+  • Re-run install steps in 02_INSTALL_OPENWEBUI.txt
+
+
+------------------------------------------------------------
+NO MODELS SHOWING IN OPEN WEBUI
+------------------------------------------------------------
+
+Fix:
+  • In terminal: ollama list  — models must exist in Ollama first
+  • Pull one: ollama pull llama3.2
+  • Restart Open WebUI: docker restart open-webui
+  • Check Ollama connection in Open WebUI Settings → Connections
+    Mac/Windows Docker: http://host.docker.internal:11434
+    Linux / pip: http://localhost:11434
+  • Confirm Ollama app is running in background
+
+
+------------------------------------------------------------
+"PORT ALREADY IN USE" (3000 OR 8080)
+------------------------------------------------------------
+
+Another app is using the same port.
+
+Fix:
+  • Quit other dev servers (React, Node, other Docker containers)
+  • Find what uses the port:
+      Mac/Linux: lsof -i :3000
+      Windows:   netstat -ano | findstr :3000
+  • Stop that app, or run Open WebUI on a different port:
+
+      docker run -d -p 3001:8080 ... (change 3000 to 3001 in URL)
+
+  • Restart computer if unsure what is blocking
+
+
+------------------------------------------------------------
+DOCKER ERRORS / "CANNOT CONNECT TO DOCKER"
+------------------------------------------------------------
+
+Fix:
+  • Open Docker Desktop and wait until fully started
+  • Mac/Windows: whale icon in menu bar / tray should be steady
+  • Restart Docker Desktop
+  • Reboot machine
+  • Ensure virtualization is enabled in BIOS (Windows/Linux)
+  • See Docker docs: https://docs.docker.com/desktop/troubleshoot/
+
+
+------------------------------------------------------------
+FAN LOUD / MACHINE HOT
+------------------------------------------------------------
+
+Expected under AI load. Mitigate if uncomfortable:
+
+  • Use a smaller model
+  • Limit session length; press Ctrl+C when done
+  • Laptop: hard surface, not bed or couch
+  • Clean dust from vents on older machines
+  • Stop if uncomfortably hot — let machine cool 10 minutes
+
+
+------------------------------------------------------------
+"UNAUTHORIZED" OR LOGIN ISSUES IN OPEN WEBUI
+------------------------------------------------------------
+
+Open WebUI uses a LOCAL account you created on first launch.
+
+Fix:
+  • Use the username/password you set — not a cloud account
+  • If forgotten, see Open WebUI docs for reset (varies by version)
+  • Data is in Docker volume open-webui — do not delete unless you
+    intend to wipe chat history
+
+
+------------------------------------------------------------
+TWO MODELS FIGHTING FOR MEMORY
+------------------------------------------------------------
+
+Fix:
+  • ollama ps  — see what is running
+  • Stop chat sessions: Ctrl+C in each terminal
+  • Restart Ollama app / service
+  • Run only one model at a time on 8–16 GB RAM
+
+
+------------------------------------------------------------
+LINUX: PERMISSION DENIED ON INSTALL SCRIPT
+------------------------------------------------------------
+
+Fix:
+  • Use sudo only if the official docs say so for your distro
+  • Or install via package manager if available
+  • Add your user to docker group if Docker permission errors:
+      sudo usermod -aG docker $USER
+    (log out and back in)
+
+
+------------------------------------------------------------
+STILL STUCK?
+------------------------------------------------------------
+
+  1. Note exact error message (screenshot helps)
+  2. Check https://github.com/ollama/ollama/issues for known bugs
+  3. Try reinstalling Ollama (models in ~/.ollama usually survive)
+  4. See README.md for support.
+
+Include: OS, RAM, model name, exact command you ran, error text.
+
+
+------------------------------------------------------------
+WHEN REINSTALLING IS THE RIGHT MOVE
+------------------------------------------------------------
+
+Reinstall Ollama if:
+  • Service will not start after multiple restarts
+  • Commands worked before and suddenly do not after OS update
+  • Corrupted partial model download (delete model first: ollama rm)
+
+Reinstall usually does NOT delete downloaded models in ~/.ollama.
+
+
+------------------------------------------------------------
+NEXT STEPS
+------------------------------------------------------------
+
+  • Product overview → README.md
+  • Quick answers → 08_FAQ.txt
+  • Privacy and safety → 09_SAFETY_AND_PRIVACY.txt

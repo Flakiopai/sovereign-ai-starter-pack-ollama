@@ -1,0 +1,151 @@
+SOVEREIGN AI STARTER PACK — OLLAMA EDITION
+00 — Overview
+
+------------------------------------------------------------
+WHAT IS THIS PACK?
+------------------------------------------------------------
+
+This is a beginner-friendly guide to running AI on your own computer.
+
+You will learn how to:
+  • Install Ollama (the easiest way to run local AI)
+  • Download and run open-source language models
+  • Add an optional browser chat interface (Open WebUI)
+  • Choose the right model for your hardware
+  • Stay private — no cloud, no accounts, no data leaks
+
+You do not need coding experience. You do not need a powerful gaming PC.
+You do need patience for the first download — models are large files.
+
+
+------------------------------------------------------------
+WHAT IS LOCAL AI?
+------------------------------------------------------------
+
+Local AI means the AI runs on YOUR machine — your laptop, desktop, or
+mini PC — instead of on a company's server in the cloud.
+
+When you use cloud AI (like a website chatbot), your messages travel
+over the internet to someone else's computer. They can log it, store it,
+or use it to train future models.
+
+When you use local AI:
+  • Your messages stay on your device
+  • No account or login is required (with Ollama)
+  • You control what models are installed
+  • You can delete everything anytime
+  • It works offline after models are downloaded
+
+
+------------------------------------------------------------
+WHAT IS SOVEREIGN COMPUTE?
+------------------------------------------------------------
+
+"Sovereign compute" means YOU own the compute. Your hardware. Your data.
+Your rules.
+
+In practice:
+  • AI runs locally, not in the cloud
+  • No third party reads your prompts or outputs
+  • No subscription required to keep using what you installed
+  • You decide what stays on disk and what gets deleted
+
+This pack is built around sovereign compute from day one.
+
+
+------------------------------------------------------------
+WHY OLLAMA FIRST?
+------------------------------------------------------------
+
+There are many local AI tools. This pack starts with Ollama because:
+
+  • Free and open-source
+  • Works on Mac, Windows, and Linux
+  • One-line install on most systems
+  • Simple commands: ollama run <model-name>
+  • Huge library of models (Llama, Qwen, Mistral, Gemma, Phi, and more)
+  • No account required
+  • Active development and frequent updates
+
+Once you understand Ollama, switching to other tools (GPT4All, LM Studio,
+Jan, Kobold) is much easier. See 05_OTHER_POPULAR_TOOLS.txt.
+
+
+------------------------------------------------------------
+WHAT LOCAL AI CAN DO (AND CANNOT DO)
+------------------------------------------------------------
+
+CAN DO:
+  • Answer questions and explain topics
+  • Help you write, edit, and brainstorm text
+  • Summarize documents you paste in
+  • Help with coding questions
+  • Run completely offline after setup
+
+CANNOT DO (OR DOES POORLY ON SMALL HARDWARE):
+  • Match the speed of cloud AI on a weak laptop
+  • Run the largest models without enough RAM
+  • Guarantee 100% factual accuracy (always verify important info)
+  • Replace professional advice (legal, medical, financial)
+
+Local AI is powerful and private. It is not magic. Model quality and your
+hardware both matter.
+
+
+------------------------------------------------------------
+HOW THIS PACK IS ORGANIZED
+------------------------------------------------------------
+
+README.md is the single entry point. It lists the full guided path.
+
+If you are a complete beginner, follow this order:
+
+  README.md                Start here — quickstart and file guide
+  00_OVERVIEW.txt          ← You are here
+  01_INSTALL_OLLAMA.txt    Install the engine
+  04_MODEL_RECOMMENDATIONS.txt    Pick your first model
+  02_INSTALL_OPENWEBUI.txt Optional browser UI
+  03_MODEL_HORSEPOWER_GUIDE.txt   Understand RAM and model sizes
+  06_HARDWARE_GUIDE.txt           Know your limits and upgrades
+  09_SAFETY_AND_PRIVACY.txt       Stay safe and private
+  05_OTHER_POPULAR_TOOLS.txt      Explore alternatives
+  08_FAQ.txt                      Quick answers
+  07_TROUBLESHOOTING.txt          Fix problems
+  10_CREDITS.txt                  Tool attribution and links
+
+
+------------------------------------------------------------
+YOUR FIRST 15 MINUTES
+------------------------------------------------------------
+
+  1. Install Ollama (01_INSTALL_OLLAMA.txt)
+  2. Open Terminal (Mac/Linux) or PowerShell (Windows)
+  3. Type:  ollama run llama3.2
+  4. Wait for the download (first time only — can take several minutes)
+  5. Type a message and press Enter
+  6. You are now running local AI
+
+That is the whole point of this pack. Everything else is depth.
+
+
+------------------------------------------------------------
+A NOTE ON PRIVACY
+------------------------------------------------------------
+
+Local AI is private by default — but only if you keep it local.
+
+  • Do not paste passwords, bank details, or medical records into any AI
+  • If you add cloud features later (some tools offer them), read the
+    settings carefully and turn them off if you want to stay local
+  • Delete models and chat history when you are done if you share the PC
+
+Full privacy guide: 09_SAFETY_AND_PRIVACY.txt
+
+
+------------------------------------------------------------
+NEXT STEPS
+------------------------------------------------------------
+
+  • Product overview and quickstart → README.md
+  • Install Ollama → 01_INSTALL_OLLAMA.txt
+  • Pick a model → 04_MODEL_RECOMMENDATIONS.txt

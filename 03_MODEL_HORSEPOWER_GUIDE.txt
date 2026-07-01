@@ -1,0 +1,174 @@
+SOVEREIGN AI STARTER PACK — OLLAMA EDITION
+03 — Model Horsepower Guide
+
+------------------------------------------------------------
+WHAT "HORSEPOWER" MEANS FOR LOCAL AI
+------------------------------------------------------------
+
+In this pack, "horsepower" means how much computing power a model needs
+and how capable it is. Two things matter most:
+
+  1. MODEL SIZE — measured in billions of parameters (e.g. 3B, 7B, 8B, 70B)
+  2. YOUR HARDWARE — mainly RAM and GPU (if you have one)
+
+Bigger models are usually smarter but slower and hungrier for memory.
+Smaller models are faster but less capable on complex tasks.
+
+
+------------------------------------------------------------
+PARAMETERS EXPLAINED SIMPLY
+------------------------------------------------------------
+
+You will see labels like 7B, 8B, 13B, or 70B on model names.
+
+  • "B" = billion parameters (the internal "knobs" the model adjusts)
+  • 3B–8B   = small / efficient — good for laptops and beginners
+  • 13B–34B = medium — needs more RAM, noticeably smarter
+  • 70B+    = large — usually needs a powerful GPU and 48 GB+ RAM
+
+Think of it like engine size: more power, more fuel needed.
+
+
+------------------------------------------------------------
+RAM — THE MOST IMPORTANT NUMBER
+------------------------------------------------------------
+
+RAM is your computer's short-term memory. The model loads into RAM when
+you run it. If you do not have enough, the model will be slow, crash, or
+refuse to load.
+
+ROUGH GUIDELINES (chat models, typical quantization):
+
+  Model size     Minimum RAM     Comfortable RAM
+  ----------     -------------     ---------------
+  3B             4–8 GB            8 GB
+  7B–8B          8 GB              16 GB
+  13B            16 GB             16–32 GB
+  34B            32 GB             32–64 GB
+  70B            48 GB+            64 GB+ with strong GPU
+
+These are approximations. Close other apps if you are near the limit.
+
+
+------------------------------------------------------------
+GPU VS CPU
+------------------------------------------------------------
+
+CPU = your main processor. Every computer has one. AI works on CPU but
+      can be slow for larger models.
+
+GPU = graphics processor. NVIDIA GPUs (and Apple Silicon) speed up AI
+      dramatically. Not required, but very helpful.
+
+  Apple Silicon Mac (M1/M2/M3/M4):
+    Excellent for local AI. 8B models run well on 16 GB unified memory.
+
+  NVIDIA GPU (Windows/Linux):
+    Look for VRAM (video RAM on the card). 8 GB VRAM handles 7B–8B
+    models comfortably. 12 GB+ opens up larger models.
+
+  No dedicated GPU / older laptop:
+    Use smaller models (3B–7B). Phi, small Qwen, or Mistral are good
+    starting points. Expect slower responses — that is normal.
+
+
+------------------------------------------------------------
+QUANTIZATION — Q4, Q5, Q8 (WHAT THOSE LETTERS MEAN)
+------------------------------------------------------------
+
+Models are often compressed to use less RAM. You may see tags like:
+
+  Q4_K_M   — smaller file, less RAM, slightly lower quality
+  Q5_K_M   — balance of size and quality (common sweet spot)
+  Q8_0     — larger, closer to full quality, more RAM needed
+
+Ollama handles quantization automatically when you pull a model. Beginners
+do not need to tune this — just pick a model size that fits your RAM.
+
+Rule of thumb: if a model is too slow or crashes, try a SMALLER model name,
+not a bigger one.
+
+
+------------------------------------------------------------
+TOKENS AND SPEED
+------------------------------------------------------------
+
+AI reads and writes in "tokens" (roughly pieces of words).
+
+  • More tokens = longer answers = more wait time
+  • Speed is measured in tokens per second (tok/s)
+  • 5–15 tok/s on CPU is normal for small models
+  • 30–80+ tok/s on Apple Silicon or NVIDIA is common for 7B–8B
+
+If responses feel slow:
+  • Use a smaller model
+  • Close Chrome, games, and other RAM-heavy apps
+  • Shorten your prompts
+  • Check you are not running two models at once (ollama ps)
+
+
+------------------------------------------------------------
+CONTEXT WINDOW — HOW MUCH IT "REMEMBERS"
+------------------------------------------------------------
+
+The context window is how much text the model can see at once (your
+message + its reply + pasted documents).
+
+  • Small models: often 4K–8K tokens
+  • Newer models: 32K, 128K, or more
+
+Larger context uses more RAM. For beginners, default settings are fine.
+Paste very long documents only if your hardware has headroom.
+
+
+------------------------------------------------------------
+MATCHING MODEL TO TASK
+------------------------------------------------------------
+
+  Quick questions, chat        → 7B–8B general model (llama3.2, mistral)
+  Coding help                  → qwen2.5, codellama, deepseek-coder
+  Weak hardware / old laptop   → 3B models (phi3, llama3.2:3b, qwen2.5:0.5b)
+  Deep reasoning (strong PC)   → 13B+ or specialized reasoning models
+  Offline writing assistant    → 8B instruction-tuned model
+
+When in doubt, start at 8B. Upgrade only if your machine handles it well.
+
+
+------------------------------------------------------------
+HOW TO CHECK IF YOU ARE OVERLOADING
+------------------------------------------------------------
+
+Signs you picked too large a model:
+
+  • Fan spins loudly for minutes before first reply
+  • "Out of memory" or model fails to load
+  • System becomes laggy or freezes
+  • Responses take 30+ seconds per sentence
+
+Fix: ollama rm <big-model>  (optional, frees disk)
+     ollama run <smaller-model>
+
+
+------------------------------------------------------------
+DISK SPACE
+------------------------------------------------------------
+
+Models are stored on disk AND loaded into RAM. Disk needs:
+
+  3B model   ~2 GB
+  7B–8B      ~4–5 GB
+  13B        ~8 GB
+  70B        ~40 GB+
+
+Check what you have:  ollama list
+Delete to free space: ollama rm <name>
+
+
+------------------------------------------------------------
+NEXT STEPS
+------------------------------------------------------------
+
+  • Product overview → README.md
+  • Specific model picks → 04_MODEL_RECOMMENDATIONS.txt
+  • Hardware buying advice → 06_HARDWARE_GUIDE.txt
+  • Slow or crashing? → 07_TROUBLESHOOTING.txt

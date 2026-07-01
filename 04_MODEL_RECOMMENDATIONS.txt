@@ -1,0 +1,162 @@
+SOVEREIGN AI STARTER PACK — OLLAMA EDITION
+04 — Model Recommendations
+
+------------------------------------------------------------
+HOW TO USE THIS FILE
+------------------------------------------------------------
+
+Pick ONE model below to start. Run it. Chat with it. Learn how local AI
+feels on your machine before downloading more.
+
+All commands assume Ollama is installed (01_INSTALL_OLLAMA.txt).
+
+Browse the full library anytime: https://ollama.com/library
+
+
+------------------------------------------------------------
+IF YOU ONLY INSTALL ONE MODEL
+------------------------------------------------------------
+
+  ollama run llama3.2
+
+Llama 3.2 (8B) is the best all-around starter for most people. Good at
+general chat, writing, and questions. Works on 8 GB RAM (16 GB better).
+
+
+------------------------------------------------------------
+STARTER MODELS BY USE CASE
+------------------------------------------------------------
+
+GENERAL CHAT & LEARNING
+  Model:   llama3.2
+  Run:     ollama run llama3.2
+  RAM:     8 GB min, 16 GB comfortable
+  Why:     Balanced, friendly, widely used, well supported
+
+FAST & LIGHT (LAPTOPS, 8 GB RAM)
+  Model:   mistral
+  Run:     ollama run mistral
+  RAM:     8 GB
+  Why:     Quick responses, solid quality for the size
+
+  Model:   phi3
+  Run:     ollama run phi3
+  RAM:     8 GB or less
+  Why:     Very efficient; great on older or low-RAM machines
+
+CODING & LOGIC
+  Model:   qwen2.5
+  Run:     ollama run qwen2.5
+  RAM:     8–16 GB
+  Why:     Strong reasoning and code help for its size
+
+  Model:   codellama
+  Run:     ollama run codellama
+  RAM:     8–16 GB
+  Why:     Focused on programming tasks
+
+WRITING & CONVERSATION
+  Model:   gemma2
+  Run:     ollama run gemma2
+  RAM:     8–16 GB
+  Why:     Natural tone, good for drafting and editing text
+
+SMALL BUT CAPABLE (VERY LOW RAM)
+  Model:   llama3.2:1b
+  Run:     ollama run llama3.2:1b
+  RAM:     4–8 GB
+  Why:     Tiny footprint; good for testing on weak hardware
+
+  Model:   qwen2.5:0.5b
+  Run:     ollama run qwen2.5:0.5b
+  RAM:     4–8 GB
+  Why:     Extremely small; basic tasks only
+
+
+------------------------------------------------------------
+IF YOU HAVE 16 GB RAM OR AN APPLE SILICON MAC
+------------------------------------------------------------
+
+These are comfortable daily drivers:
+
+  ollama run llama3.2        (best general pick)
+  ollama run qwen2.5         (sharper logic and code)
+  ollama run mistral         (fast alternative)
+
+You can keep two or three of these installed. Disk space adds up — delete
+what you do not use:  ollama rm <name>
+
+
+------------------------------------------------------------
+IF YOU HAVE 32 GB+ RAM OR A STRONG NVIDIA GPU
+------------------------------------------------------------
+
+You can explore larger models. Check https://ollama.com/library for
+current names — the catalog updates often.
+
+Examples (verify names on the library before pulling):
+
+  ollama run llama3.1:70b     (very capable, very heavy)
+  ollama run qwen2.5:32b      (strong reasoning at medium-large size)
+  ollama run mixtral          (mixture-of-experts; quality jump)
+
+If these feel slow or crash, step back to 8B models. Bigger is not always
+better for daily use.
+
+
+------------------------------------------------------------
+MODELS TO AVOID AS YOUR FIRST DOWNLOAD
+------------------------------------------------------------
+
+  • 70B+ models on 8–16 GB RAM machines — will fail or crawl
+  • Multiple large models at once — pick one active model
+  • Obscure fine-tunes before you understand the basics — stick to
+    well-known names in this file first
+
+
+------------------------------------------------------------
+HOW TO SWITCH MODELS
+------------------------------------------------------------
+
+Exit the current chat: Ctrl + C
+
+Start a different model:
+
+  ollama run mistral
+
+Ollama unloads the previous model when you exit. Only one chat model runs
+at a time by default.
+
+
+------------------------------------------------------------
+HOW TO EXPLORE MORE
+------------------------------------------------------------
+
+  ollama list                  (what you have installed)
+  https://ollama.com/library   (browse all models in your browser)
+
+Read the model card description before downloading. Size is usually shown
+in the name (7b, 8b, 13b, etc.).
+
+
+------------------------------------------------------------
+RECOMMENDED FIRST-WEEK PATH
+------------------------------------------------------------
+
+  Day 1:  ollama run llama3.2     — learn the basics
+  Day 2:  Try phi3 or mistral     — compare speed vs quality
+  Day 3:  ollama run qwen2.5      — test coding or logic questions
+  Day 4:  Install Open WebUI      — 02_INSTALL_OPENWEBUI.txt
+  Day 5:  Delete models you do not use (ollama rm)
+
+Keep it simple. Depth comes later.
+
+
+------------------------------------------------------------
+NEXT STEPS
+------------------------------------------------------------
+
+  • Product overview → README.md
+  • RAM and GPU details → 03_MODEL_HORSEPOWER_GUIDE.txt
+  • Other apps that run the same models → 05_OTHER_POPULAR_TOOLS.txt
+  • Problems? → 07_TROUBLESHOOTING.txt

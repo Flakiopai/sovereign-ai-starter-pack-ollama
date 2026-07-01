@@ -1,0 +1,172 @@
+SOVEREIGN AI STARTER PACK — OLLAMA EDITION
+08 — FAQ
+
+------------------------------------------------------------
+GENERAL
+------------------------------------------------------------
+
+Q: Do I need to pay for anything?
+A: Ollama and the models in this guide are free. Open WebUI is free.
+   Optional tools (GPT4All, LM Studio, Jan) are free for local use.
+   You pay with electricity and your own hardware — no subscription.
+
+Q: Do I need an internet connection?
+A: Only for installing software and downloading models. After that,
+   chat works fully offline.
+
+Q: Do I need a ChatGPT or OpenAI account?
+A: No. Ollama does not require any cloud account.
+
+Q: Is this the same as ChatGPT?
+A: Similar idea (you chat with AI), different technology. Local models
+   run on your PC. Quality and speed depend on your model and hardware.
+   Cloud ChatGPT runs on OpenAI's servers and needs an account.
+
+Q: Will my data be used to train AI?
+A: With a proper local setup, your chats stay on your machine. Ollama
+   does not send prompts to the cloud by default. Some optional tools
+   may offer cloud features — turn them off in settings if you want
+   full privacy. See 09_SAFETY_AND_PRIVACY.txt.
+
+
+------------------------------------------------------------
+INSTALL & SETUP
+------------------------------------------------------------
+
+Q: Which operating system is best?
+A: All three work. Apple Silicon Macs are excellent for beginners.
+   Windows with NVIDIA GPU is great for speed. Linux is popular with
+   power users. Use what you already have.
+
+Q: Do I need to know programming?
+A: No. You need to copy commands into Terminal (Mac/Linux) or
+   PowerShell (Windows). This pack walks you through each step.
+
+Q: What is Terminal / PowerShell?
+A: A text window where you type commands. Mac: Terminal app.
+   Windows: PowerShell or Command Prompt. It looks plain but is safe
+   when you follow trusted instructions.
+
+Q: Is Open WebUI required?
+A: No. It is optional. Ollama works from the terminal alone.
+
+Q: Do I need Docker?
+A: Only if you use the recommended Open WebUI install method.
+   Ollama itself does not need Docker.
+
+
+------------------------------------------------------------
+MODELS
+------------------------------------------------------------
+
+Q: Which model should I download first?
+A: llama3.2 for most people. phi3 or mistral if you have 8 GB RAM
+   and want speed. See 04_MODEL_RECOMMENDATIONS.txt.
+
+Q: How big are model downloads?
+A: Roughly 2 GB for tiny models, 4–5 GB for 7B–8B models, 40 GB+
+   for the largest. Check free disk space before pulling.
+
+Q: Can I delete a model?
+A: Yes.  ollama rm <model-name>  frees disk space. You can re-download
+   anytime with ollama pull.
+
+Q: How many models should I keep?
+A: Start with one. Add more only when you know you need them. They
+   eat disk space and tempt you to run too many at once.
+
+Q: Why is the first response so slow?
+A: The model loads into RAM on first use. Later messages in the same
+   session are faster. CPU-only machines are always slower than GPU.
+
+Q: Are local models as smart as GPT-4?
+A: The largest cloud models still lead on some hard tasks. But modern
+   7B–8B local models are surprisingly good for everyday chat, writing,
+   and learning — especially with privacy benefits.
+
+
+------------------------------------------------------------
+HARDWARE
+------------------------------------------------------------
+
+Q: Can I run this on a laptop?
+A: Yes. Use smaller models on 8 GB RAM laptops. 16 GB is comfortable.
+
+Q: Do I need an NVIDIA GPU?
+A: No. GPU helps speed. CPU works for small models.
+
+Q: My Mac has 8 GB RAM. Can I still do this?
+A: Yes. Use phi3, llama3.2:1b, or qwen2.5:0.5b. Close other apps.
+
+Q: Can I use an old PC?
+A: If it has 8 GB RAM and a modern 64-bit OS, try phi3. Very old
+   machines (4 GB RAM) will struggle.
+
+
+------------------------------------------------------------
+PRIVACY & SECURITY
+------------------------------------------------------------
+
+Q: Is local AI 100% private?
+A: Private from cloud companies — yes, when configured correctly. Anyone
+   with physical access to your computer can still read files on disk.
+   Shared family PCs need extra care.
+
+Q: Can I use this at work?
+A: Check your employer's IT policy. Local AI may be fine or forbidden.
+   Do not paste confidential work data into any AI without permission.
+
+Q: Should I paste passwords or bank info into local AI?
+A: No. Never paste secrets into any AI, local or cloud.
+
+Q: Does Ollama phone home?
+A: Ollama downloads models from the internet when you request them.
+   Normal chat inference runs locally. Check Ollama's docs for updates
+   on telemetry in your version.
+
+
+------------------------------------------------------------
+TROUBLESHOOTING
+------------------------------------------------------------
+
+Q: Something broke. Where do I start?
+A: 07_TROUBLESHOOTING.txt — match your symptom to a fix.
+
+Q: Can I get human support?
+A: See README.md for support. Include your OS, RAM, model name,
+   and the exact error message when you reach out.
+
+
+------------------------------------------------------------
+OTHER TOOLS
+------------------------------------------------------------
+
+Q: Should I switch from Ollama to GPT4All or LM Studio?
+A: Only if you want a different interface. Ollama is the best starting
+   point. See 05_OTHER_POPULAR_TOOLS.txt for comparisons.
+
+Q: Can I run Ollama and LM Studio together?
+A: You can install both, but do not run large models in both at the
+   same time — they compete for RAM.
+
+
+------------------------------------------------------------
+UPDATES
+------------------------------------------------------------
+
+Q: How do I update Ollama?
+A: Download the latest installer from ollama.com or re-run the Linux
+   install script. Models usually stay on disk after update.
+
+Q: How do I know my pack version?
+A: See VERSION.TXT and changelog.txt in this folder.
+
+
+------------------------------------------------------------
+NEXT STEPS
+------------------------------------------------------------
+
+  • Product overview and quickstart → README.md
+  • Something broken → 07_TROUBLESHOOTING.txt
+  • Privacy and safety → 09_SAFETY_AND_PRIVACY.txt
+  • Tool links and attribution → 10_CREDITS.txt

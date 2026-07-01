@@ -1,0 +1,181 @@
+SOVEREIGN AI STARTER PACK — OLLAMA EDITION
+02 — Install Open WebUI
+
+------------------------------------------------------------
+WHAT IS OPEN WEBUI?
+------------------------------------------------------------
+
+Open WebUI is a free, open-source chat interface that runs in your web
+browser. It looks and feels similar to popular cloud chat apps — but it
+talks to your local Ollama models instead of the cloud.
+
+  • Free and open-source
+  • Runs on your machine (localhost)
+  • Connects to Ollama automatically
+  • No cloud account required for basic local use
+  • Supports multiple models, chat history, and settings
+
+Official project: https://github.com/open-webui/open-webui
+
+Open WebUI is OPTIONAL. Ollama works fine from the terminal alone.
+
+
+------------------------------------------------------------
+BEFORE YOU START
+------------------------------------------------------------
+
+  • Ollama must already be installed (01_INSTALL_OLLAMA.txt)
+  • At least one model downloaded (try: ollama pull llama3.2)
+  • Docker Desktop installed (recommended method below)
+  • About 2 GB free disk space for the Open WebUI container
+
+
+------------------------------------------------------------
+METHOD 1 — DOCKER (RECOMMENDED)
+------------------------------------------------------------
+
+Docker packages Open WebUI so you do not have to manage Python or
+dependencies manually. Best for beginners who want a reliable setup.
+
+STEP 1 — Install Docker Desktop
+
+  macOS / Windows:
+    Download from https://www.docker.com/products/docker-desktop/
+    Install and open Docker Desktop. Wait until it says "running."
+
+  Linux:
+    Follow Docker's official install for your distro:
+    https://docs.docker.com/engine/install/
+
+STEP 2 — Make sure Ollama is running
+
+  Open Terminal or PowerShell and run:
+
+    ollama list
+
+  If that works, Ollama is ready.
+
+STEP 3 — Start Open WebUI
+
+  macOS / Windows (copy the full command as one line):
+
+    docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+
+  Linux (copy the full command as one line):
+
+    docker run -d -p 3000:8080 --network=host -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+
+  First run downloads the image — may take a few minutes.
+
+STEP 4 — Open in your browser
+
+  Go to:  http://localhost:3000
+
+  Create a local account on first visit. This account is stored on YOUR
+  machine only — it is not a cloud signup.
+
+STEP 5 — Select a model and chat
+
+  • Open WebUI should detect your Ollama models automatically
+  • Pick a model (e.g. llama3.2) from the dropdown
+  • Start typing
+
+STEP 6 — Stop Open WebUI
+
+    docker stop open-webui
+
+STEP 7 — Start Open WebUI again later
+
+    docker start open-webui
+
+  Then open http://localhost:3000
+
+
+------------------------------------------------------------
+METHOD 2 — PIP (NO DOCKER)
+------------------------------------------------------------
+
+If you prefer not to use Docker and are comfortable with Python:
+
+  1. Install Python 3.11 or newer from https://python.org
+  2. Open Terminal or PowerShell
+  3. Run:
+
+       pip install open-webui
+
+  4. Start the server:
+
+       open-webui serve
+
+  5. Open http://localhost:8080 in your browser
+
+Note: the default port is 8080 for pip, not 3000. Check the terminal
+output for the exact URL.
+
+
+------------------------------------------------------------
+CONNECTING TO OLLAMA
+------------------------------------------------------------
+
+Open WebUI looks for Ollama at http://localhost:11434 by default.
+
+If models do not appear:
+  • Confirm Ollama is running: ollama list
+  • Restart Open WebUI
+  • In Open WebUI Settings → Connections, verify the Ollama base URL is
+    http://host.docker.internal:11434 (Docker on Mac/Windows) or
+    http://localhost:11434 (Linux or pip install)
+
+
+------------------------------------------------------------
+FIRST-TIME TIPS
+------------------------------------------------------------
+
+  • Create your local admin account on first launch — pick a password
+    you will remember; it is not recoverable from the cloud
+  • Download models through Ollama first; they appear in Open WebUI
+  • Chats are saved locally in the Open WebUI data volume
+  • You can delete chat history from the UI anytime
+
+
+------------------------------------------------------------
+UPDATING OPEN WEBUI
+------------------------------------------------------------
+
+Docker method:
+
+  docker stop open-webui
+  docker rm open-webui
+  docker pull ghcr.io/open-webui/open-webui:main
+  (re-run the docker run command from Step 3 above)
+
+Your chat data is kept in the named volume (open-webui) unless you
+delete it on purpose.
+
+
+------------------------------------------------------------
+TROUBLESHOOTING QUICK FIXES
+------------------------------------------------------------
+
+  Page won't load:
+    → Is Docker running? Is the container started? (docker ps)
+    → Try http://localhost:3000 again after 30 seconds
+
+  No models showing:
+    → Run ollama list in terminal — models must exist in Ollama first
+    → Restart Open WebUI container
+
+  Port already in use:
+    → See 07_TROUBLESHOOTING.txt ("PORT ALREADY IN USE" section)
+
+Full troubleshooting: 07_TROUBLESHOOTING.txt
+
+
+------------------------------------------------------------
+NEXT STEPS
+------------------------------------------------------------
+
+  • Product overview → README.md
+  • Choose models → 04_MODEL_RECOMMENDATIONS.txt
+  • Understand speed and RAM → 03_MODEL_HORSEPOWER_GUIDE.txt
+  • Privacy rules → 09_SAFETY_AND_PRIVACY.txt

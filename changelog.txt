@@ -1,0 +1,15 @@
+v1.1 — June 2026
+• Numbered beginner guides (00–10)
+• Ollama install, model recommendations, and hardware guides
+• Open WebUI setup (Docker and pip)
+• Alternative tools: GPT4All, LM Studio, Jan, Kobold
+• Safety, privacy, FAQ, troubleshooting, and credits
+• README.md as single product entry point
+• Studio-grade GitHub README with Mermaid workflow visuals
+• Repo metadata: .gitignore, .gitattributes, CONTRIBUTING, SECURITY, CODE_OF_CONDUCT
+• MIT License (Modified for Sovereign AI Workflow Packs)
+
+v1.0 — Initial Release
+• First public release
+• Ollama and Open WebUI setup guide
+• Sovereign compute best practices
